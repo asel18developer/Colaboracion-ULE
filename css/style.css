@@ -1,0 +1,363 @@
+/*
+ * --- CSS PARA EL FOOTER PEGAJOSO EMPLEANDO FLEXBOX --
+ */
+body {
+    /**
+    * 1. Making the <body> element behave like a flexbox container.
+    * 2. Making flex children line up vertically (horizontal is default)
+    * 3. Setting the min-height to 100% of the viewport height.
+    */
+
+    /* [1] */
+    /* Ye Olde Flexbox for Webkit */
+    display: -webkit-box;
+    /* Tweener flexbox for IE10 */
+    display: -ms-flexbox;
+    /* Prefixed "new flexbox" */
+    display: -webkit-flex;
+    /* unprefixed standard "new flexbox" version for the rest */
+    display: flex;
+
+    /* [2] */
+    /* Your grandparents flexbox for old Webkit */
+    -webkit-box-orient: vertical;
+    /* Prefixed new syntax: */
+    -webkit-flex-direction: column;
+    /* (Same syntax for weird IE tweener) */
+    -ms-flex-direction: column;
+    /* unprefixed new syntax */
+    flex-direction: column;
+
+    /* [3] */
+
+}
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex: 1;
+}
+main {
+margin-bottom: auto;
+}
+
+/*.parallax-container {
+  height: 200px;
+}*/
+
+/*
+ * --- CSS PARA LA BARRA DE BUSQUEDA --
+ */
+nav form {
+
+  margin-left: 5%;
+  width: 90%;
+}
+
+/*
+ * --- CSS PARA UN FLUJO DE CARDS POR COLUMNAS ---
+ */
+
+.cards-container {
+  column-break-inside: avoid;
+}
+.cards-container .card {
+  display: inline-block;
+  overflow: visible;
+}
+.autismo{
+  text-align: justify;
+}
+.contenerdorUsuarios{
+
+  height: 25em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+.contenerdorFormularios{
+
+  height: 21em;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .botonesModificar > button:last-child{
+    margin-top: 10px;
+  }
+
+
+
+  #floatHome, #floatHomeModal{
+    position: fixed;
+    z-index: 998;
+    bottom: 3%;
+    right: 10px;
+
+
+  }
+
+  #floatBack, #floatBackModal
+  {
+    position: fixed;
+    z-index: 998;
+    bottom: 3%;
+    right: 75px;
+    z-index: 998;
+
+  }
+
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1299px) {
+
+  #floatHome,#floatHomeModal{
+    position: fixed;
+    z-index: 998;
+    bottom: 4%;
+    right: 10px;
+
+  }
+  #floatBack,  #floatBackModal
+  {
+    position: fixed;
+    z-index: 998;
+    bottom: 4%;
+    right: 75px;
+
+  }
+
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.help {
+    display: none;
+  }
+}
+/*
+ * En dispositivo con una resolucion minima de 993px se muestran en 4 columnas
+ */
+@media only screen and (min-width: 1300px) {
+
+  #floatHome{
+    position: fixed;
+    z-index: 998;
+    bottom: 20%;
+    right: 30px;
+
+  }
+  #floatBack
+  {
+    position: fixed;
+    z-index: 998;
+    bottom: 20%;
+    right: 100px;
+
+  }
+
+  #floatHomeModal{
+    position: fixed;
+    z-index: 998;
+    bottom: 5%;
+    right: 10px;
+
+  }
+  #floatBackModal
+  {
+    position: fixed;
+    z-index: 998;
+    bottom: 5%;
+    right: 80px;
+
+  }
+
+  .contenerdorFormularios{
+
+    height: 30em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+  }
+
+  .contenerdorUsuarios{
+
+    height: 35em;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+  }
+
+ }
+
+ div.item {
+     vertical-align: top;
+     display: inline-block;
+     text-align: center;
+     width: 125px;
+     padding: 1%;
+ }
+ div.serie {
+     vertical-align: top;
+     display: inline-block;
+     text-align: center;
+     width: 150px;
+     padding: 5px;
+ }
+
+ a>img {
+     width: 90%;
+     height: 90%;
+ }
+
+ .miniatura {
+   width: 30px;
+   margin-left: 70px;
+   position: absolute;
+   height: auto;
+ }
+
+ .item>img {
+     width: 90%;
+     height: 90%;
+
+ }
+ .serie>img {
+     width: 90%;
+     height: 90%;
+
+ }
+ .carpeta {
+     background-image: "../img/carpeta.png";
+     width: 90%;
+     height: 90%;
+
+ }
+
+ .caption {
+     display: block;
+
+ }
+
+
+
+.text-center {
+  text-align: center;
+}
+
+
+
+
+
+.imagesContainer{
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.imagesContainerModal{
+  width: 100%;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.imagesContainerAdd{
+  width: 100%;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.formActions{
+  padding-top: 5%;
+  padding-left: 5%;
+}
+.btn-flat{
+  width: 100%;
+}
+
+
+
+.userName{
+  font-size: 3rem;
+  font-weight: bold;
+}
+.usuario{
+
+  border: 2px solid #a1a1a1;
+  padding: 10px 40px;
+  border-radius: 25px;
+
+
+
+
+}
+
+/*CSS NECESARIO PARA QUE EL CHECKBOX NO ESTROPEE EL FLEX DEL FOOTER*/
+.usuario > input {
+
+    display: none;
+
+}
+
+.usuario-select{
+
+  border: 2px solid #a1a1a1;
+  padding: 10px 40px;
+  border-radius: 25px;
+
+}
+.usuario-select:hover{
+  background-color: #D7EBF5;
+}
+a{
+	text-decoration:none;
+  color: inherit;
+}
+
+.selectorImagenes{
+
+  /*visibility: hidden;*/
+
+  width: 100%;
+  height: 400px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+}
+
+.serie-amarillaR{
+
+  margin-left: -60%;
+}
+.serie-amarillaL{
+    margin-right: -60%;
+}
+
+.btnMargin{
+  margin: 1%;
+}
+/*.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+
+}*/
